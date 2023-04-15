@@ -13,6 +13,9 @@ class PrimeFactorsTest {
         assertFactors(2, Arrays.asList(2));
         assertFactors(3, Arrays.asList(3));
         assertFactors(4, Arrays.asList(2, 2));
+        assertFactors(5, Arrays.asList(5));
+        assertFactors(6, Arrays.asList(2, 3));
+        assertFactors(7, Arrays.asList(7));
     }
 
     private void assertFactors(int n, List<Integer> list) {
