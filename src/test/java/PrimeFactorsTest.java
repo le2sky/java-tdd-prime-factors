@@ -10,6 +10,7 @@ class PrimeFactorsTest {
     void prime_factors() {
         assertFactors(1, Arrays.asList());
         assertFactors(2, Arrays.asList(2));
+        assertFactors(3, Arrays.asList(3));
     }
 
     private void assertFactors(int n, List<Integer> list) {
@@ -17,8 +18,8 @@ class PrimeFactorsTest {
     }
 
     private List<Integer> factors(int n) {
-        if (n == 2) {
-            return Arrays.asList(2);
+        if (n > 1) {
+            return Arrays.asList(n);
         }
         return Arrays.asList();
     }
