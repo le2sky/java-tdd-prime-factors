@@ -8,8 +8,12 @@ class PrimeFactorsTest {
 
     @Test
     void prime_factors() {
-        assertThat(factors(1)).isEqualTo(Arrays.asList());
-        assertThat(factors(2)).isEqualTo(Arrays.asList(2));
+        assertFactors(1, Arrays.asList());
+        assertFactors(2, Arrays.asList(2));
+    }
+
+    private void assertFactors(int n, List<Integer> list) {
+        assertThat(factors(n)).isEqualTo(list);
     }
 
     private List<Integer> factors(int n) {
