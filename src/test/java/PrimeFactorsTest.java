@@ -17,6 +17,7 @@ class PrimeFactorsTest {
         assertFactors(6, Arrays.asList(2, 3));
         assertFactors(7, Arrays.asList(7));
         assertFactors(8, Arrays.asList(2, 2, 2));
+        assertFactors(9, Arrays.asList(3, 3));
     }
 
     private void assertFactors(int n, List<Integer> list) {
@@ -29,6 +30,10 @@ class PrimeFactorsTest {
             while (n % 2 == 0) {
                 n /= 2;
                 factors.add(2);
+            }
+            while (n % 3 == 0) {
+                n /= 3;
+                factors.add(3);
             }
         }
         if (n > 1) {
