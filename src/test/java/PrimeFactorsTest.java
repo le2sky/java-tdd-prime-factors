@@ -26,18 +26,13 @@ class PrimeFactorsTest {
 
     private List<Integer> factors(int n) {
         List<Integer> factors = new ArrayList<>();
-        if (n > 1) {
-            while (n % 2 == 0) {
-                n /= 2;
-                factors.add(2);
+        int divisor = 2;
+        while (n > 1) {
+            while (n % divisor == 0) {
+                n /= divisor;
+                factors.add(divisor);
             }
-            while (n % 3 == 0) {
-                n /= 3;
-                factors.add(3);
-            }
-        }
-        if (n > 1) {
-            factors.add(n);
+            divisor++;
         }
         return factors;
     }
