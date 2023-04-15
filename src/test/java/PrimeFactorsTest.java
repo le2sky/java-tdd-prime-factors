@@ -18,6 +18,7 @@ class PrimeFactorsTest {
         assertFactors(7, Arrays.asList(7));
         assertFactors(8, Arrays.asList(2, 2, 2));
         assertFactors(9, Arrays.asList(3, 3));
+        assertFactors(2 * 2 * 3 * 3 * 3 * 7 * 7 * 11 * 11 * 13, Arrays.asList(2, 2, 3, 3, 3, 7, 7, 11, 11, 13));
     }
 
     private void assertFactors(int n, List<Integer> list) {
@@ -32,7 +33,7 @@ class PrimeFactorsTest {
                 factors.add(divisor);
             }
         }
-        
+
         return factors;
     }
 }
